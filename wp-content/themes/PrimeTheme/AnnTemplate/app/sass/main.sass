@@ -1,0 +1,66 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #222222
+
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a
+	color: #007bff
+a:hover
+	color: #0056b3
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+header
+	color: #fff
+	a
+		color: #eaeaea
+	a:hover
+		color: #ffffff
+	.header_line
+		height: 40px
+		background: #e65e63
+		line-height: 40px
+		.phone
+			display: inline-block
+			padding-right: 10px
+			border-right: 1px solid #ce7a7a
+		.email
+			display: inline-block				
+			padding-left: 10px								
+
+@import "media" // Always at the end

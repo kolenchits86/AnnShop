@@ -1,0 +1,35 @@
+/wp-admin/
+/wp-content/languages/
+/wp-content/plugins/
+/wp-content/uploads/
+/wp-content/index.php
+/wp-content/themes/twentyfifteen
+/wp-content/themes/twentyseventeen
+/wp-content/themes/twentysixteen
+/wp-content/themes/index.php
+/wp-content/themes/PrimeTheme/AnnTemplate/node_modules/
+/wp-content/themes/PrimeTheme/AnnTemplate/.bowerrc
+/wp-content/themes/PrimeTheme/AnnTemplate/gulpfile.js
+/wp-content/themes/PrimeTheme/AnnTemplate/package.json
+/wp-content/themes/PrimeTheme/AnnTemplate/package-lock.json
+/wp-content/themes/PrimeTheme/AnnTemplate/app/_1-готовый шаблон/
+/wp-content/themes/PrimeTheme/AnnTemplate/app/_2-чистый шаблон/
+/wp-content/themes/PrimeTheme/AnnTemplate/app/_3-temp/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-trackback.php
+/wp-signup.php
+/xmlrpc.php
