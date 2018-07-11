@@ -1,66 +1,1052 @@
-@import "vars"
 @import "fonts"
 @import "libs"
+@import "vars"
 
-::placeholder
-	color: #222222
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
 
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
 
-::selection
-	background-color: $accent
-	color: #fff
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
 
-a
-	color: #007bff
-a:hover
-	color: #0056b3
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%	
+	font-weight: 400
+
+a, li, h3, .offerButton, input, img
+	-webkit-transition: all 0.3s ease;
 
 body
 	font-size: 16px
-	min-width: 320px
+	//min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+	overflow-x: hidden
+	opacity: 1	
+	font-weight: 300;
+	margin-bottom: 200px
+	overflow-x: auto
+
+a
+	text-decoration: none !important;
+
+.container
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
-	&.img-width
-		width: 100%
 
-.text-center
-	text-align: center
+@import "media" // Всегда в конце
 
-b, strong
-	font-weight: bold
-
-header
-	color: #fff
+.header_line
+	color: #ffffff;
+	background-color: #E65E63;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 40px;
 	a
-		color: #eaeaea
+		color: #eaeaea		
 	a:hover
 		color: #ffffff
-	.header_line
-		height: 40px
-		background: #e65e63
-		line-height: 40px
-		.phone
-			display: inline-block
-			padding-right: 10px
-			border-right: 1px solid #ce7a7a
-		.email
-			display: inline-block				
-			padding-left: 10px								
+	.phone, .email, .user, .logon
+		display: inline-block
+		padding-right: 10px
+		border-right: 1px solid #ce7a7a
+		i
+			font-size: 12px;
+			padding: 5px;
 
-@import "media" // Always at the end
+
+
+.right
+	float: right;
+	a:hover
+		color: #FCD2D4 !important;	
+	.account
+		display: inline-block	;
+		font-size: 16px
+		.account_link
+			background: url(../img/sprite.png) no-repeat scroll 0 -212px transparent;
+			border-right: 1px solid #f7868a;
+			padding: 8px 15px 8px 30px;
+			color: #ffffff;
+		.account_link:hover
+			background-position: -234px -212px;
+	.login
+		display: inline-block	;
+		font-size: 16px
+		.logout_link
+			background: url(../img/sprite.png) no-repeat scroll 3px -174px transparent;
+			border-right: 1px solid #f7868a;
+			padding: 8px 15px 8px 30px;
+			color: #ffffff;
+		.logout_link:hover
+			background-position: -234px -174px;
+
+
+
+.navi_line
+	background-color: #0f0f0f;
+	position: relative;	
+	.logo
+		margin-bottom: -2px;
+	.cart_form
+		background: #fff;
+		position: absolute;
+		top: 1px;
+		right: 0px;
+		min-height: 200px;
+		min-width: 200px;		
+		z-index: 200	
+		border: 1px solid #f3f3f3
+		display: none
+		h3
+			margin: 20px 20px 0 20px
+			padding: 0
+			text-transform: uppercase
+		hr
+			margin: 5px 0 0 0;
+		ul:hover
+			overflow: overlay;
+		ul
+			list-style-type: none;
+			padding-left: 10px;
+			max-height: 290px;
+			width: 300px;
+			padding-bottom: 1px
+			overflow: hidden			
+			li:hover
+				background: #f3f3f3
+			li
+				width: 250px
+				margin-bottom: 10px				
+				position: relative
+				width: 100%
+				.cart_item_link:hover
+					background: #f3f3f3
+				.cart_item_link
+					text-decoration: none;
+					color: #000
+					display: inline-block										
+				img
+					border: 1px solid #f3f3f3
+					max-height: 90px;
+					max-height: 90px;
+				.cart_item_text
+					font-weight: 300;
+					display: inline-block
+					a:hover>i
+						color: #e65e63
+					i
+						position: absolute;
+						top: 0px;
+						right: 30px;
+						color: #333333;
+		.cart_button
+			margin-top: 10px;
+			margin-bottom: 10px
+			margin-left: 10px
+			input:hover
+				background: #e65e63
+				color: #fff
+			input
+				background: #f3f3f3
+				border: 0px;
+				outline: none
+				padding: 10px
+					
+	.search_form
+		background: none repeat scroll 0 0 #fff;
+		border: 1px solid #ddd;
+		display: inline-block;
+		position: absolute;
+		top: 1px;
+		right: 0px;
+		z-index: 200;
+		display: none;
+		label
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute;
+			display: none;
+		.search_field
+			cursor: text;
+			float: left;
+			outline: 0 none;
+			padding: 4px 8px;
+			width: 200px;
+			border: none;
+		input[type="submit"]
+			border: medium none;
+			color: #FFFFFF;
+			height: 35px;
+			overflow: hidden;
+			padding: 0;
+			text-transform: capitalize;
+			font-weight: bold;
+			z-index: 3;
+			font-size: 0;
+			background: url(../img/search.png) no-repeat scroll 9px 9px transparent;
+			float: right;
+			font-size: 0;
+			height: 35px;
+			width: 35px;
+			outline: none;
+	.head_button
+		float: right;
+		margin-top: 40px;
+	nav
+		display: inline-block;		
+		margin-top: 20px;
+		ul
+			border-top: 1px solid #2d2d2d;
+			padding-left: -0px;
+			list-style-type: none;
+			margin-bottom: 16px
+			margin-top: 16px
+			display: table
+			table-layout: fixed			
+		li.active
+			border-top: 3px solid #e65e63;
+		li:hover
+			border-top: 3px solid #e65e63;			
+		li
+			display: inline-block;
+			margin-right: 30px;
+			min-width: 80px;
+			text-align: center;
+			padding-top: 10px;
+			display: table-cell;
+			border-top: 3px solid #e65e6300;
+
+			a
+				color: #ffffff
+				display: block;
+				font-size: 16px;
+				/* margin: 0px 30px 0px 30px; */
+				padding: 0px 30px 0px 30px;
+			a:hover
+				color: #ffffff !important
+
+	.search
+		width: 40px;
+		height: 40px;
+		background: #ffffff;
+		border: none;
+		border-radius: 3px;
+		margin-left: 40px;
+		display: inline-block;
+		text-align: center;
+		line-height: 40px;
+		cursor: pointer;
+		i
+			font-size: 20px;
+
+	.cart
+		width: 40px;
+		height: 40px;
+		background: #ffffff;
+		border: none;
+		border-radius: 3px;
+		margin-left: 5px;
+		display: inline-block;
+		text-align: center;
+		line-height: 40px;
+		cursor: pointer;
+		position: relative
+		.cart_count
+			position: absolute;
+			top: -10px;
+			right: 10px;
+			display: block;
+			width: 20px;
+			background: #e65e63;
+			border-radius: 20px;
+			font-size: 10px;
+			height: 20px;
+			span
+				position: absolute;
+				top: -10px;
+				font-size: 14px;
+				right: 6px;
+				color: #fff;
+				font-weight: 400;
+		i
+			font-size: 20px;
+
+.slider
+	width: 100%
+	img
+		max-height: 400px;
+		max-width: 100%
+	.slide3
+		background: url("../img/slide3.jpg") center top no-repeat 
+		background-size: 100% 400px;
+		height: 400px
+		position: relative
+		.padding_top_50
+			padding-top: 50px		
+		.slide3-2-img
+			position: absolute;
+			bottom: 0px;
+		h3
+			font-weight: 300
+			font-size: 34px
+			margin-bottom: 10px;
+			margin-top: 10px
+		a
+			margin-top: 40px;
+			display: inline-block
+	.slide2
+		background: url("../img/slide2.jpg") center top no-repeat 
+		background-size: 100% 400px;
+		height: 400px
+		position: relative
+		h3
+			font-size: 30px
+			color: #fff
+			font-weight: 300
+		.slide2-img
+			position: absolute
+			top: 61px;
+		ul
+			list-style-type: none
+			padding: 0
+			margin-bottom: 30px;
+			li
+				color: #fff
+				font-weight: 300
+				font-size: 30px
+				img
+					margin-right: 10px;
+	.slide1
+		background: url("../img/slide1.jpg") center top no-repeat 
+		background-size: 100% 400px;
+		height: 400px
+		h3
+			font-size: 40px
+			margin-bottom: 40px
+		h4
+			font-size: 30px
+			color: #e65e63
+			line-height: 45px
+			font-weight: 300
+			margin-bottom: 40px
+a.buttonLink
+	background: #151514;
+	padding: 15px;
+	color: #fff;
+a.buttonLink:hover
+	color: #e65e63
+
+.fotorama
+	position: relative
+	.fotorama__nav-wrap
+		position: absolute
+		bottom: 0px
+.fotorama__stage
+	position: relative !important
+	.fotorama__arr
+		position: absolute !important
+		top: 50% !important
+
+.offerSection
+	margin-top: 20px
+	.offerButton:hover
+		color: #e65e63
+	.offerButton:hover
+		span
+			color: #000
+	.offerButton
+		border: 1px solid #f1f1f1;
+		.offer_button_wrap
+			margin: 8px;
+			padding: 14px;
+			background: #f1f1f1;
+			.icons
+				float: left
+				font-size: 45px
+				ml
+			.text
+				margin-left: 20px
+				display: inline-block
+				h3
+					margin-top: 10px
+					margin-bottom: 0px
+					font-weight: 400
+				span
+					font-size: 14px
+
+.featuredProduct, .newProduct
+	margin-top: 20px
+	.margin_top20
+		margin-top: 20px
+	.featuredProduct_text, .newProduct_text
+		border-bottom: 2px solid #f1f1f1
+		h3
+			display: inline-block
+			padding-right: 20px
+			border-bottom: 3px solid #e65e63
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-bottom: -3px
+.featuredProduct_item, .newProduct_item
+	border: 1px solid #f1f1f1
+	padding-top: 10px
+	position: relative
+	.c-rating
+		position: absolute;
+		bottom: 45px;
+		left: 0;
+		z-index: 200;
+		transform: scale(0.8);
+		margin-left: 16px;
+	.triangle-topright-sale
+		width: 0
+		height: 0
+		border-top: 60px solid #000;
+		border-left: 60px solid transparent
+		position: absolute
+		top: 0
+		right: 0
+		span
+			position: absolute;
+			top: -50px;
+			right: 2px;
+			offset-rotate: 30;
+			-webkit-transform: rotate(45deg);
+			font-weight: 600;
+			color: #fff;
+			text-transform: uppercase
+	img
+		z-index: -100
+		max-width: 230px
+		margin: 0 auto;	
+		transition: all ease-in-out .2s;
+	img:hover
+		transform: scale(1.05);
+		transition: all 0.3s ease-in-out 0s;
+	a:hover h3
+		color: #e65e63
+	h3
+		font-size: 16px;
+		font-weight: 500;
+		margin-left: 20px
+		color: #000
+	h3:hover
+		color: #e65e63
+	.col-md-6
+		padding: 0
+
+		.featuredProduct_item__price, .newProduct_item__price
+			border: 1px solid #dedede
+			background: #e0e0e0;
+			padding: 8px
+			text-align: center
+			font-weight: 500
+			.amount
+				font-weight: 600
+.featuredProduct_item__addToCart, .newProduct_item__addToCart
+	margin-left: -1px
+	margin-right: -1px
+	border-right: 1px solid #f1f1f1
+	border-bottom: 2px solid #f1f1f1
+	background: #f1f1f1;
+	padding: 8px
+	text-align: center
+	font-weight: 500
+	a
+		display: block
+		color: #000
+	a:hover
+		color: #e65e63
+
+.subBanners
+	margin-top: 40px
+
+.newProduct
+	margin-top: 40px
+
+.lattestNews
+	margin-top: 40px
+	.fotorama__dot
+		display: none !important
+	h3
+		font-weight: 400
+
+	.tac
+		text-align: center
+		width: 375px
+		max-height: 210px
+		min-height: 160px
+		padding: 5px
+		border: 1px solid #d7d7d7
+		overflow: hidden
+		img
+			height: auto
+			max-width: 100%
+			margin: 0 auto		
+		img:hover
+			transition: all ease-in-out .2s;
+			transform: scale(1.05);	
+	.newsText
+		margin-left: 40px
+		strong
+			color: #e65e63
+		h4
+			text-transform: uppercase
+			font-weight: 500
+			margin-top: 0
+		a
+			color: #e65e63
+			font-weight: 300
+		p
+			border-bottom: 1px solid #d7d7d7
+			padding-bottom: 10px
+		i
+			margin-right: 15px
+
+.fotorama_custom__arr_prev, .fotorama_custom__arr_next
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	display: block;
+	float: right;
+	height: 22px;
+	position: absolute;
+	top: -30px;
+	width: 22px;
+	cursor: pointer;
+	color: transparent;
+	top: 20px
+
+.fotorama_custom__arr_prev
+	background: url(../img/sprite.png) no-repeat scroll -204px 2px transparent;
+	right: 20px;
+
+.fotorama_custom__arr_next
+	background: url(../img/sprite.png) no-repeat scroll -234px 2px transparent;
+	left: auto;
+	right: 0px;
+
+.subscribe
+	background: none repeat scroll 0 0 #f8f8f8;
+	padding: 20px;
+	border: 10px solid #e8e8e8;
+	margin-top: 19px;
+	input[type="submit"]
+		display: block
+		background-color: #e65e63
+		color: #fff
+		padding: 5px
+		padding-left: 20px
+		padding-right: 20px
+		border: none
+		outline: 0
+	input[type="submit"]:hover
+		background: #a09fa0
+	input[type="email"]
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 8px 10px 7px;
+		width: 90%
+		height: 40px
+	input[type="email"]:focus
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		outline: 0;
+
+.reviews
+	background: #f8f8f8
+	padding: 40px
+	h3
+		font-weight: 400
+	.rewivews_page
+		display: table
+	.rewivews_page__img
+		display: table-cell
+		vertical-align: middle
+		img
+			border-radius: 50%
+			border: 10px solid #fff;
+			width: 140px			
+		img:hover
+			border: 10px solid #e65e63
+	.rewivews_page__text
+		padding-left: 40px
+		display: table-cell
+		p
+			font-style: italic;
+			font-size: 14px;
+		h4, h5
+			margin: 0
+
+.brand
+	padding: 40px
+	h3
+		font-weight: 400
+	ul
+		display: table
+		width: 100%
+		li
+			display: table-cell
+			text-align: center
+
+.stock
+	background: #e65e63
+	color: #fff
+	font-weight: normal
+	h3
+		font-size: 22px;
+		line-height: 1.0909090909;		
+		font-weight: normal
+	h4
+		font-size: 14px
+		font-weight: normal
+	.posrel
+		position: relative
+	a
+		margin-top: 40px
+		padding: 10px 40px 10px 40px 
+		background: #fff
+		line-height: 100px
+	a:hover
+		background: #0f0f0f
+		color: #fff
+
+footer
+	padding: 40px
+	background: #0f0f0f
+	color: #9E9E9E
+	font-size: 14px
+	li.page_item
+		margin-bottom: 5px
+	p
+		font-size: 14px
+	h3
+		color: #fff
+		font-weight: 400
+		margin-top: 0
+		margin-bottom: 20px
+	h1
+		font-size: 18px;
+		line-height: 24px;
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			a
+				color: #9E9E9E
+			a:hover
+				color: #fff
+	.last-posts
+		ul
+			li
+				margin-bottom: 20px
+	.post-date
+		text-align: center
+		width: 60px
+		border-right: 1px solid #9E9E9E
+		float: left
+		margin-right: 20px;
+		.post-month
+			text-transform: uppercase
+	.contact
+		i
+			margin-right: 10px
+		div
+			margin-bottom: 5px
+	.post
+		margin-left: 20px		
+		.post-comments
+			a
+				color: #e65e63
+	.phone
+		border: none
+	.adress
+		i
+			float: left			
+		div
+			overflow: hidden;
+
+.main_inner
+	background: #ececec
+	padding-top: 20px
+	padding-bottom: 20px
+	h1
+		font-size: 20px;
+		margin: 0;
+		font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+		font-weight: normal;
+		float: left;
+		text-transform: uppercase;
+		color: #0f0f0f;
+		margin-top: 5px;
+	h3
+		margin: 0
+	.breadcrumb
+		margin: 0;
+		float: right;
+		background: none repeat scroll 0 0 #AAABAC;
+		padding: 5px 10px;
+		color: #ffffff;
+		font-size: 14px;
+		color: #fff
+		font-weight: normal;
+		h3
+			font-size: 16px
+			a
+				color: #fff
+				font-weight: normal;
+			a:hover
+				text-decoration: underline !important
+
+
+.blog_part
+	padding-top: 20px
+	h1
+		color: #333333;
+		font-size: 16px;
+		/* margin: 0; */
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 0 0 10px;
+		border-bottom: 1px solid #eeeeee;
+	ul
+		list-style-type: none
+		padding-left: 0
+		li:hover
+			background: url(../img/cat_arrow_hover.png) no-repeat scroll 0 13px transparent;
+		li
+			background: url(../img/cat_arrow.png) no-repeat scroll 0 13px transparent;
+			padding: 5px 5px 5px 13px;		
+	.cat_item
+		a
+			color: #777777;
+			font-size: 14px
+		a:hover
+			color: #e65e63
+		ul
+			margin-left: 14px
+		.cat_item_arrow
+			background: url(../img/cat_arrow.png) no-repeat scroll 0 13px transparent;
+			height: 22px;
+			width: 14px;
+			display: inline-block;		
+		.cat_item_arrow:hover
+			background: url(../img/cat_arrow_hover.png) no-repeat scroll 0 13px transparent;
+		.active
+			border-bottom: 1px solid #e65e63;
+			color: #e65e63;
+
+.tags
+	li:hover
+		background: #e65e63 !important
+	li
+		display: inline-block
+		background: #a09fa0 !important
+		padding: 0 !important
+		margin-bottom: 5px
+		a
+			color: #fff !important
+			padding: 5px !important	
+			font-size: 12px !important
+		a:hover
+			background: #e65e63 !important
+.all_posts
+	padding-top: 30px
+	.post:last-of-type
+		margin-bottom: 40px
+	.pagination
+		margin-bottom: 40px
+		float: right
+		a, span
+			color: #777
+			padding: 8px
+			border: 1px solid #E3E2E2
+			margin-right: 5px
+		a:hover, .current
+			color: #e65e63
+			border: 1px solid #e65e63
+.all_posts .post:before
+	background: url(../img/post-formate-icons.png) no-repeat scroll 0 0 #e65e63;
+	background-position: -24px -25px;
+	content: "";
+	height: 40px;
+	width: 40px;
+	display: block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 10px;
+.all_posts .post
+	margin-top: 20px
+	position: relative
+	border-bottom: 2px solid #eeeeee;
+	h1
+		font-size: 18px;
+		line-height: 20px;
+		padding: 0px 0 0;
+		/* border-bottom: 1px solid #e5e5e5; */
+		margin-bottom: 0;
+		font-weight: 400;
+		color: #696868;
+		margin-bottom: 20px
+		margin-left: 50px;
+		padding-top: 20px;
+		a
+			color: #696868;
+		a:hover
+			text-decoration: underline !important
+	.thumbnail
+		max-height: 400px
+		overflow: hidden
+		margin-bottom: 20px
+		img
+			width: 100%
+			height: auto
+	.meta
+		margin-bottom: 20px
+		color: #777
+		.post-categories
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px;
+		div
+			display: inline-block
+			font-size: 14px
+			a
+				color: #333333
+			a:hover
+				color: #e65e63
+		i
+			margin-right: 10px
+			margin-left: 20px
+		.author, .comment
+			a:hover
+				color: #e65e63
+		.author:hover, .comment:hover
+			color: #e65e63
+		.author:hover, .comment:hover a
+			color: #e65e63
+	.text
+		color: #777
+		margin-bottom: 20px
+	.read_more			
+		color: #FFF;			
+		display: inline-block;
+		margin-bottom: 20px
+		a
+			background: #e65e63;
+			padding: 5px 15px;
+			color: #fff
+		a:hover
+			background: #777
+
+.visible-xs, .visible-sm
+	.blog_part
+		padding: 0
+		h1:hover
+			cursor: pointer
+
+#comments
+	background-color: #f4f4f1;
+	padding: 20px
+	margin-top: 80px
+	.comment-respond
+		margin-top: 40px
+	#comments-list
+		ul
+			list-style-type: none
+	.addComment, .comment-respond
+		h3
+			color: #e65e63;
+			font-size: 15px
+			text-transform: uppercase
+			margin: 0
+		h4
+			font-size: 14px
+			margin: 0
+			margin-top: 10px
+			margin-bottom: 20px
+		label
+			display: block
+			font-weight: 300
+			font-size: 16px
+		input
+			height: 35px;			
+		textarea, input
+			width: 100%;
+			padding-left: 20px;
+			margin-bottom: 20px
+			outline-color: #cacaca;
+			border: 1px solid #f4f4f1
+		input[type="submit"]			
+			background: #777
+			padding: 5px 15px;
+			color: #fff
+			width: auto
+		input[type="submit"]:hover
+			background: #e65e63;
+
+
+.header3
+	border-bottom: 2px solid #f1f1f1
+	margin-bottom: 20px
+	h3
+		display: inline-block
+		padding-right: 20px
+		border-bottom: 3px solid #e65e63
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-bottom: -3px
+		font-size: 18px
+		padding-bottom: 5px
+
+.contact
+	color: #777;
+	.contact_text
+		vertical-align: middle
+		display: table
+		margin-bottom: 5px;
+		p
+			line-height: 25px
+		i
+			margin-right: 20px
+			font-size: 18px
+		.desc
+			vertical-align: middle
+			display: table-cell
+	.contact_form
+		width: 100%
+		display: table
+		div
+			margin-bottom: 10px
+		input, textarea
+			color: rgb(119, 119, 119);
+			padding: 5px 0px 5px 10px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba(0, 0, 0, 0.1);
+			display: table-cell
+			outline-color: #cacaca;
+			width: 100%
+		input[type="submit"]
+			background: #777;
+			padding: 5px 15px;
+			color: #fff;
+			width: 100px
+			margin-bottom: 20px;
+			outline-color: #cacaca;
+			border: 1px solid #f4f4f1;
+			margin-left: 15px
+		input[type="submit"]:hover
+			background: #e65e63;
+
+.map
+	margin-top: 40px
+	margin-bottom: 40px
+
+.centered_header
+	text-align: center
+	padding-bottom: 20px
+	margin-top: 40px
+	font-size: 26px;
+	color: #333333;
+	border-bottom: 1px solid #eee;
+.about
+	p
+		line-height: 25px;
+		color: #666666
+		font-size: 14px
+		text-align: center
+		margin-bottom: 40px
+
+.title_outer	
+	background: url(../img/title_line.png) repeat-x scroll 0 center transparent;
+	text-align: center;
+	h1
+		background: none repeat scroll 0 0 #ffffff;
+		display: inline-block;
+		margin: 0;
+		padding: 0 20px;
+		font-size: 22px;
+		text-transform: capitalize;
+		color: #333333;
+
+.aboutus
+	text-align: center
+	img
+		margin-top: 40px
+		margin-bottom: 40px
+		max-width: 100%
+		width: 600px
+		border: 1px solid #eee;
+		padding: 40px
+		padding-bottom: 0
+
+.cat_descr
+	margin-top: 40px
+	padding-bottom: 20px
+	border-bottom: 1px solid #eee;
+	img
+		border: 1px solid #eee;
+		padding: 10px
+		display: inline-block
+		max-width: 100%
+	p
+		display: inline-block
+
+.products
+	margin-top: 20px
+	.newProduct_item
+		margin-top: 20px
+
+.all_posts
+	.title_outer
+		margin-top: 25px;
+
+img
+	max-width: 100%
+	height: auto
+
+h2.screen-reader-text 
+	display: none;
+
+@import '../css/font-awesome.css'
+@import '../libs/fotorama/fotorama.css'
+@import '../libs/animate.css/animate.min.css'
+@import '../libs/five-star-rating/css/rating.min.css'
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+@import '../libs/ion.rangeSlider/css/ion.rangeSlider.css'
+@import '../libs/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css'

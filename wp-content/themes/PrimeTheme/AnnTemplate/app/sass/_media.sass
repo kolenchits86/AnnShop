@@ -1,31 +1,380 @@
 @import "vars"
 
-
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-+media-breakpoint-down(lg)
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.navi_line nav li
+		min-width: 55px !important
+	.slider h3
+		line-height: 1em
+	.offerSection .offerButton .offer_button_wrap .text
+		h3
+			font-size: 16px !important
+		span
+			font-size: 12px !important
+	.slide1
+		h4
+			margin-bottom: 40px
+	/**/
 
-// ≥992px
-+media-breakpoint-down(md)
 
-// ≥768px
-+media-breakpoint-down(sm)
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
 
-// ≥576px
-+media-breakpoint-down(xs)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.navi_line
+		text-align: center
+		padding-top: 30px;
+		padding-bottom: 30px
+		.right
+			float: none !important
+		img
+		.search
+			margin-left: 0px !important
+	.header_line
+		height: auto !important
+		.email
+			margin-left: 0 !important
+		.phone
+			border-right: none
+		.right
+			float: left
+			a
+				transition: none
+	nav
+		display: block !important
+		ul
+			li
+				display: block !important
+				margin-right: -15px !important
+				margin-left: -15px !important
+				padding: 10px
+			li:hover
+			 border-top: none !important
+			 background: #2d2d2d;
+			.active:hover
+				border-top: 3px solid #e65e63 !important
+			.active
+				border-bottom: 3px solid #e65e63 !important
+
+	.search_form
+		display: block;
+		width: 100% !important
+		position: relative !important
+		top: 0 !important
+		right: 0 !important
+		border: none !important
+		input 
+			width: 100% !important
+			margin-top: 30px
+		input[type="submit"]
+			height: 35px !important
+			width: 50px !important
+			outline: 0 !important
+			margin-top: -35px !important
+
+	.cart_form
+		position: relative 
+		position: relative !important
+		ul
+			width: 100% !important
+			padding-left: 0 !important
+
+	.slide1
+
+		a
+			display: block
+			width: 180px
+			text-align: center
+			margin-bottom: 20px
+		h3
+			font-size: 20px !important
+			margin-bottom: 0
+		h4
+			font-size: 16px !important
+			margin-top: 0 !important
+			margin-right: 50px !important
+			color: #000 !important
+			line-height: normal !important
+		img
+			width: 40%
+	.slide2
+		h3
+			font-size: 18px !important
+		img
+			display: none
+		li
+			font-size: 18px !important
+			margin-left: 20px
+			img
+				display: inline-block
+	.slide3
+		img
+			display: none
+		h3
+			font-size: 20px !important
+	.fotorama__arr--next
+		left: 285px
+
+	.offerSection
+		i
+			font-size: 25px !important
+		.text
+			margin-left: 14px !important
+		.icons
+			font-size: 38px !important
+
+	.featuredProduct_item
+		margin-bottom: 20px
+
+	.c-rating
+		position: inherit !important
+
+	.subBanners
+		img
+			width: 100% !important
+			margin-bottom: 30px !important
+	.newProduct
+		margin-top: 0 !important
+
+	.newProduct_item
+		margin-bottom: 20px
+
+	.lattestNews .tac
+		width: 262px !important
+		min-height: 100px !important
+		margin: 0 auto !important
+	.lattestNews .newsText
+		width: 262px !important
+		margin-left: 0 !important
+	.lattestNews
+		.fotorama__stage
+			height: 600px !important
+
+	.subscribe
+		margin-bottom: 20px !important
+
+	.reviews
+		padding: 0 !important
+
+	.reviews .rewivews_page__img
+		display: block !important
+		text-align: center !important
+	.rewivews_page__text
+		margin-bottom: 20px !important
+		display: block !important
+	
+	.reviews
+		.fotorama__stage
+			height: 700px !important
+
+	.brand ul
+		list-style-type: none !important
+		padding: 0 !important
+		li
+			display: block !important
+			margin-bottom: 20px !important
+
+	.last-posts
+		margin-top: 20px
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.navi_line
+		text-align: center
+		padding-top: 30px;
+		padding-bottom: 30px
+		.right
+			float: none !important
+		img
+		.search
+			margin-left: 0px !important
+	.header_line
+		height: auto !important
+		.email
+			margin-left: 0 !important
+		.phone
+			border-right: none
+		.right
+			float: left
+			a
+				transition: none
+	nav
+		display: block !important
+		ul
+			li
+				display: block !important
+				margin-right: -15px !important
+				margin-left: -15px !important
+				padding: 10px
+			li:hover
+			 border-top: none !important
+			 background: #2d2d2d;
+			.active:hover
+				border-top: 3px solid #e65e63 !important
+
+	.search_form
+		display: block;
+		width: 100% !important
+		position: relative !important
+		top: 0 !important
+		right: 0 !important
+		border: none !important
+		input 
+			width: 100% !important
+			margin-top: 30px
+		input[type="submit"]
+			height: 35px !important
+			width: 50px !important
+			outline: 0 !important
+			margin-top: -35px !important
+
+	.cart_form
+		position: relative 
+		position: relative !important
+		ul
+			width: 100% !important
+			padding-left: 0 !important
+
+	.slide1
+
+		a
+			display: block
+			width: 180px
+			text-align: center
+			margin-bottom: 20px
+		h3
+			font-size: 20px !important
+			margin-bottom: 0
+		h4
+			font-size: 16px !important
+			margin-top: 0 !important
+			margin-right: 50px !important
+			color: #000 !important
+			line-height: normal !important
+		img
+			width: 40%
+	.slide2
+		h3
+			font-size: 18px !important
+		img
+			display: none
+		li
+			font-size: 18px !important
+			margin-left: 20px
+			img
+				display: inline-block
+	.slide3
+		img
+			display: none
+		h3
+			font-size: 20px !important
+	.fotorama__arr--next
+		left: 285px
+
+	.offerSection
+		i
+			font-size: 25px !important
+		.text
+			margin-left: 14px !important
+		.icons
+			font-size: 38px !important
+
+	.featuredProduct_item
+		margin-bottom: 20px
+
+	.c-rating
+		position: inherit !important
+
+	.subBanners
+		img
+			width: 100% !important
+			margin-bottom: 30px !important
+	.newProduct
+		margin-top: 0 !important
+
+	.newProduct_item
+		margin-bottom: 20px
+
+	.lattestNews .tac
+		width: 262px !important
+		min-height: 100px !important
+		margin: 0  !important
+	.lattestNews .newsText
+		width: 262px !important
+		margin-left: 0 !important
+	.lattestNews
+		.fotorama__stage
+			height: 600px !important
+
+	.subscribe
+		margin-bottom: 20px !important
+
+	.reviews
+		padding: 0 !important
+
+	.reviews .rewivews_page__img
+		display: block !important
+		text-align: center !important
+	.rewivews_page__text
+		margin-bottom: 20px !important
+		display: block !important
+	
+	.reviews
+		.fotorama__stage
+			height: 700px !important
+
+	.brand ul
+		list-style-type: none !important
+		padding: 0 !important
+		li
+			display: block !important
+			margin-bottom: 20px !important
+
+	.last-posts
+		margin-top: 20px
+
+	/**/
 
 
 /*==========  Mobile First  ==========*/
 
-// ≤576px
-+media-breakpoint-up(sm)
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
 
-// ≤768px
-+media-breakpoint-up(md)
 
-// ≤992px
-+media-breakpoint-up(lg)
+	/**/
 
-// ≤1200px
-+media-breakpoint-up(xl)
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
