@@ -1,4 +1,56 @@
 <?php
+
+add_action('admin_menu', function(){
+	add_theme_page('Настроить1', 'Настроить2', 'edit_theme_options', 'customize.php');
+ });
+ add_action('customize_register', function($customizer){
+    $customizer->add_section(
+        'example_section_one',
+        array(
+            'title' => 'Общие настройки',
+            'description' => 'Данные магазина',
+            'priority' => 11,
+		)	
+	);
+	$customizer->add_setting(
+		'phone',
+		array('default' => '+79226511699')
+	);
+	$customizer->add_setting(
+		'adress',
+		array('default' => 'г. Югорск, ул. Мира 4-64')
+	);
+	$customizer->add_setting(
+		'email',
+		array('default' => 'kolenchits86@gmail.com')
+	);
+	$customizer->add_control(
+		'phone',
+		array(
+			'label' => 'Телефон',
+			'section' => 'example_section_one',
+			'type' => 'text',
+		)
+	);
+	$customizer->add_control(
+		'adress',
+		array(
+			'label' => 'Адрес',
+			'section' => 'example_section_one',
+			'type' => 'text',
+		)
+	);
+	$customizer->add_control(
+		'email',
+		array(
+			'label' => 'E-mail',
+			'section' => 'example_section_one',
+			'type' => 'text',
+		)
+	);
+});
+
+
 /**
  * Storefront engine room
  *
